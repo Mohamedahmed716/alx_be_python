@@ -1,7 +1,22 @@
-length = int(input("Enter the size of the pattern:"))
-i = 0
-while length > i :
-    for j in range(length):
-        print("*" * length,end="")
+# pattern_drawing.py
+
+# Prompt the user to enter the size of the pattern
+size = int(input("Enter the size of the pattern: "))
+
+# Ensure the user entered a positive integer
+if size <= 0:
+    print("Please enter a positive integer.")
+else:
+    # Initialize the row counter
+    row = 0
+
+    # Use a while loop to iterate through each row
+    while row < size:
+        # Use a for loop to print asterisks in each row
+        for col in range(size):
+            print("*", end="")
+        # Print a newline character to move to the next row
         print()
-        i += 1
+        # Increment the row counter
+        row += 1
+
